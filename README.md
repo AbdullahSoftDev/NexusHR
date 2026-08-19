@@ -13,31 +13,23 @@
 <br />
 
 [![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge\&logo=react\&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?style=for-the-badge\&logo=typescript\&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-Frontend-646CFF?style=for-the-badge\&logo=vite\&logoColor=white)](https://vitejs.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge\&logo=node.js\&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express.js-Backend-000000?style=for-the-badge\&logo=express\&logoColor=white)](https://expressjs.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=for-the-badge\&logo=supabase\&logoColor=white)](https://supabase.com/)
 
-<br />
 
-[![GitHub](https://img.shields.io/badge/GitHub-AbdullahSoftDev-181717?style=flat-square\&logo=github)](https://github.com/AbdullahSoftDev/NexusHR)
-[![License](https://img.shields.io/badge/License-Not%20Specified-lightgrey?style=flat-square)](#license)
-[![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)](#project-status)
+## 🧭 Navigation
 
-<br />
-
-### 🧭 Navigation
-
-[Overview](#overview) •
-[Features](#features) •
-[Architecture](#system-architecture) •
-[Tech Stack](#technology-stack) •
-[Installation](#installation) •
-[Project Structure](#project-structure) •
-[Testing](#testing) •
-[Security](#security-considerations) •
-[Future Improvements](#future-improvements)
+[Overview](##overview) •
+[Features](##features) •
+[Architecture](##system-architecture) •
+[Tech Stack](##technology-stack) •
+[Installation](##installation) •
+[Project Structure](##project-structure) •
+[Testing](##testing) •
+[Security](##security-considerations) •
+[Future Improvements](##future-improvements)
 
 </div>
 
