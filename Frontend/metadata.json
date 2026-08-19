@@ -1,0 +1,6 @@
+{
+  "name": "NexusHR - Human Resource Management System",
+  "description": "Enterprise-grade HRMS featuring Employee Directory, Attendance Tracking, Leave Workflow Approvals, Payroll & Payslip Generation, Analytics Dashboard, and Settings.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
