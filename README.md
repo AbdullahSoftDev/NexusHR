@@ -1,6 +1,10 @@
 <div align="center">
+  <img src="https://raw.githubusercontent.com/AbdullahSoftDev/Pictures/main/neuxhr.png" alt="NexusHR Dashboard" width="800">
+</div>
 
-# 🧑‍💼 NexusHR
+<div align="center">
+
+# 🧑‍💼 NexusHR Management Platform
 
 ### Connecting People, Processes & Productivity
 
