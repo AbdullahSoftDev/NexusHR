@@ -2,9 +2,9 @@
 
 # 🧑‍💼 NexusHR
 
-### Modern Human Resource Management System
+### Connecting People, Processes & Productivity
 
-**A full-stack HR management platform for managing employees, attendance, leave, payroll, roles, and organizational insights from a centralized dashboard.**
+**NexusHR — Nexus Human Resources — is a centralized HR management platform that connects employee management, attendance, leave, payroll, roles, and organizational insights in one unified system.**
 
 <br />
 
@@ -17,14 +17,23 @@
 
 <br />
 
-[Features](#-features) •
-[Architecture](#-system-architecture) •
-[Tech Stack](#-technology-stack) •
-[Installation](#-installation) •
-[Project Structure](#-project-structure) •
-[Testing](#-testing) •
-[Security](#-security) •
-[Future Improvements](#-future-improvements)
+[![GitHub](https://img.shields.io/badge/GitHub-AbdullahSoftDev-181717?style=flat-square\&logo=github)](https://github.com/AbdullahSoftDev/NexusHR)
+[![License](https://img.shields.io/badge/License-Not%20Specified-lightgrey?style=flat-square)](#license)
+[![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)](#project-status)
+
+<br />
+
+### 🧭 Navigation
+
+[Overview](#overview) •
+[Features](#features) •
+[Architecture](#system-architecture) •
+[Tech Stack](#technology-stack) •
+[Installation](#installation) •
+[Project Structure](#project-structure) •
+[Testing](#testing) •
+[Security](#security-considerations) •
+[Future Improvements](#future-improvements)
 
 </div>
 
@@ -32,19 +41,53 @@
 
 ## 📌 Overview
 
-**NexusHR** is a full-stack Human Resource Management System designed to centralize and simplify essential HR operations within a single platform.
+**NexusHR** stands for **Nexus Human Resources**.
 
-The system provides a structured environment for organizations to manage employee information, monitor attendance, process leave requests, handle payroll-related workflows, control access through user roles, and view organizational information through an analytics-oriented dashboard.
+The word **Nexus** represents a central connection or hub — which reflects the purpose of this platform: bringing people, HR processes, workforce operations, and organizational information together in one connected environment.
 
-NexusHR follows a separated frontend/backend architecture, allowing the user interface and server-side business logic to evolve independently while using Supabase PostgreSQL as the data layer.
+NexusHR is a **full-stack Human Resource Management System** designed to centralize and simplify essential HR operations.
 
-The project is built with modern web technologies and is designed with maintainability, modularity, scalability, and practical HR workflows in mind.
+The platform provides a structured environment for organizations to manage:
+
+* 👥 Employee information
+* ⏱️ Attendance
+* 📝 Leave requests
+* 💰 Payroll
+* 🔐 User roles and access
+* 📊 Organizational insights
+* 🏢 Departments and workforce information
+
+Rather than managing these operations through disconnected spreadsheets, documents, or manual processes, NexusHR brings them together through a centralized web application.
 
 ---
 
-## 🎯 Project Goals
+## 🎯 Project Vision
 
-NexusHR was created to address common problems associated with manually managing HR operations.
+### **Connecting People, Processes & Productivity**
+
+NexusHR is built around the idea that HR operations should be connected rather than isolated.
+
+```text
+                         NEXUSHR
+                            │
+          ┌─────────────────┼─────────────────┐
+          │                 │                 │
+          ▼                 ▼                 ▼
+       PEOPLE           PROCESSES       PRODUCTIVITY
+          │                 │                 │
+          ▼                 ▼                 ▼
+     Employees          Attendance         Analytics
+     Departments        Leave              Reports
+     Roles              Payroll            Insights
+```
+
+By connecting these areas, NexusHR provides a foundation for a more organized and efficient HR workflow.
+
+---
+
+# 🎯 Project Goals
+
+NexusHR was created to address common challenges associated with manually managing HR operations.
 
 ### Primary goals
 
@@ -57,101 +100,107 @@ NexusHR was created to address common problems associated with manually managing
 * Provide an administrative dashboard
 * Reduce dependency on manual HR processes
 * Maintain a structured relational data model
-* Provide a foundation that can be extended into a larger HR platform
+* Provide a scalable foundation for future HR modules
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 👥 Employee Management
+## 👥 Employee Management
 
-Manage employee records through a centralized HR interface.
+NexusHR provides centralized employee management functionality.
 
-**Capabilities include:**
+### Capabilities
 
 * Create employee records
 * View employee information
 * Update employee details
 * Delete employee records
-* Organize employees within the HR system
+* Organize employee information
 * Maintain structured employee data
 
 ---
 
-### ⏱️ Attendance Management
+## ⏱️ Attendance Management
 
-NexusHR provides attendance functionality for recording and monitoring employee attendance.
+NexusHR provides functionality for recording and monitoring employee attendance.
 
-**Core workflow:**
-
-```text
-Employee
-   ↓
-Check In
-   ↓
-Attendance Record
-   ↓
-Check Out
-   ↓
-Attendance History
-```
-
-This creates a centralized attendance workflow instead of relying on manual attendance sheets.
-
----
-
-### 📝 Leave Management
-
-Employees can submit leave requests while authorized users can manage those requests.
-
-**Leave workflow:**
+### Attendance workflow
 
 ```text
 Employee
    │
-   ├── Submit Leave Request
+   ▼
+Check In
+   │
+   ▼
+Attendance Record
+   │
+   ▼
+Check Out
+   │
+   ▼
+Attendance History
+```
+
+This provides a centralized alternative to manually maintaining attendance records.
+
+---
+
+## 📝 Leave Management
+
+Employees can submit leave requests while authorized users can manage those requests.
+
+### Leave workflow
+
+```text
+Employee
+   │
+   ▼
+Submit Leave Request
    │
    ▼
 Pending
    │
-   ├── Approve
+   ├───────────────┐
+   ▼               ▼
+Approve          Reject
    │
-   └── Reject
+   ▼
+Updated Leave Status
 ```
 
-This provides a clear approval workflow for employee leave.
+This creates a structured approval workflow for employee leave.
 
 ---
 
-### 💰 Payroll Management
+## 💰 Payroll Management
 
-NexusHR includes payroll processing functionality for organizing employee compensation information.
+NexusHR includes payroll functionality for organizing employee compensation information.
 
-The payroll module is intended to provide HR administrators with a centralized place to manage payroll-related records and workflows.
+The payroll module provides HR administrators with a centralized environment for managing payroll-related records and workflows.
 
 ---
 
-### 🔐 Role-Based Access
+## 🔐 Role-Based Access
 
-The system supports different levels of access for different types of users.
-
-Current role model:
+NexusHR supports different levels of access based on user roles.
 
 | Role         | Purpose                                           |
 | ------------ | ------------------------------------------------- |
-| **Admin**    | System-level management and administration        |
+| **Admin**    | System-level administration and management        |
 | **HR**       | Human resource operations and employee management |
-| **Employee** | Access to employee-oriented functionality         |
+| **Employee** | Employee-oriented functionality                   |
 
-Role-based access helps ensure that users interact with functionality appropriate to their responsibilities.
+Role-based access provides the foundation for ensuring that users only interact with functionality appropriate to their responsibilities.
 
 ---
 
-### 📊 Dashboard & Analytics
+## 📊 Dashboard & Analytics
 
-NexusHR includes a centralized dashboard designed to provide an overview of HR operations.
+NexusHR provides a centralized dashboard for viewing important HR information.
 
-The dashboard can be used to surface information such as:
+The dashboard can surface information such as:
 
 * Employee statistics
 * Attendance information
@@ -159,84 +208,160 @@ The dashboard can be used to surface information such as:
 * Payroll-related information
 * Organizational metrics
 
-The goal is to give HR and administrative users a quick overview instead of requiring them to navigate through individual modules for every task.
+The objective is to give HR and administrative users a quick overview of workforce operations.
 
 ---
 
-## 🧩 Core Modules
+# 🧩 Core Modules
 
-NexusHR is organized around several major HR modules:
+NexusHR is organized around several interconnected HR modules.
 
 ```text
-                    ┌─────────────────────┐
-                    │       NexusHR       │
-                    │   HR Management     │
-                    └──────────┬──────────┘
-                               │
-        ┌──────────────────────┼──────────────────────┐
-        │                      │                      │
-        ▼                      ▼                      ▼
- ┌─────────────┐       ┌─────────────┐       ┌─────────────┐
- │  Employees   │       │ Attendance  │       │    Leave    │
- └─────────────┘       └─────────────┘       └─────────────┘
-        │                      │                      │
-        └──────────────────────┼──────────────────────┘
-                               │
-                    ┌──────────┴──────────┐
-                    │                     │
-                    ▼                     ▼
-              ┌───────────┐       ┌─────────────┐
-              │  Payroll  │       │  Analytics  │
-              └───────────┘       └─────────────┘
-                              
-                    Role-Based Access
+                       ┌───────────────────────┐
+                       │       NexusHR         │
+                       │  Human Resources Hub  │
+                       └───────────┬───────────┘
+                                   │
+             ┌─────────────────────┼─────────────────────┐
+             │                     │                     │
+             ▼                     ▼                     ▼
+      ┌─────────────┐       ┌─────────────┐       ┌─────────────┐
+      │  Employees  │       │ Attendance  │       │    Leave    │
+      └─────────────┘       └─────────────┘       └─────────────┘
+             │                     │                     │
+             └─────────────────────┼─────────────────────┘
+                                   │
+                         ┌─────────┴─────────┐
+                         │                   │
+                         ▼                   ▼
+                  ┌─────────────┐     ┌─────────────┐
+                  │   Payroll   │     │  Analytics  │
+                  └─────────────┘     └─────────────┘
+
+                         Role-Based Access
 ```
 
 ---
 
 # 🏗️ System Architecture
 
-NexusHR follows a separated full-stack architecture.
+NexusHR follows a separated full-stack architecture where the frontend, backend, and database have distinct responsibilities.
 
 ```text
-┌───────────────────────────────────────────────┐
-│                  FRONTEND                     │
-│                                               │
-│             React + TypeScript                │
-│                  + Vite                       │
-│                                               │
-└──────────────────────┬────────────────────────┘
-                       │
-                       │ HTTP / REST API
-                       ▼
-┌───────────────────────────────────────────────┐
-│                   BACKEND                     │
-│                                               │
-│              Node.js + Express                │
-│                                               │
-│        Business Logic / API / Services        │
-│                                               │
-└──────────────────────┬────────────────────────┘
-                       │
-                       │ Database Operations
-                       ▼
-┌───────────────────────────────────────────────┐
-│                 DATA LAYER                    │
-│                                               │
-│             Supabase PostgreSQL               │
-│                                               │
-└───────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────┐
+│                     FRONTEND                      │
+│                                                   │
+│              React + TypeScript                   │
+│                     + Vite                        │
+│                                                   │
+│          UI / Pages / Components / State          │
+└───────────────────────┬───────────────────────────┘
+                        │
+                        │ HTTP / REST API
+                        ▼
+┌───────────────────────────────────────────────────┐
+│                     BACKEND                       │
+│                                                   │
+│                Node.js + Express                  │
+│                                                   │
+│       Routes / Controllers / Business Logic       │
+└───────────────────────┬───────────────────────────┘
+                        │
+                        │ Database Operations
+                        ▼
+┌───────────────────────────────────────────────────┐
+│                  DATABASE LAYER                   │
+│                                                   │
+│               Supabase PostgreSQL                 │
+│                                                   │
+│           Relational Data / SQL Schema            │
+└───────────────────────────────────────────────────┘
 ```
 
 ### Architecture principles
 
 * Frontend and backend are separated
-* Business logic is handled on the server
+* Business logic is handled by the server
 * Database operations are centralized
 * Environment variables are used for configuration
-* The backend contains dedicated tests
+* Backend testing is maintained separately
 * Database schema is maintained separately
-* The architecture can be extended without tightly coupling UI and data layers
+* Modules can be extended independently
+* UI and data layers remain loosely coupled
+
+---
+
+# 🔄 Application Workflow
+
+A typical NexusHR workflow follows this structure:
+
+```text
+                         User
+                           │
+                           ▼
+                 ┌─────────────────┐
+                 │ Authentication  │
+                 └────────┬────────┘
+                          │
+                          ▼
+                 ┌─────────────────┐
+                 │ Role & Access   │
+                 │ Verification    │
+                 └────────┬────────┘
+                          │
+             ┌────────────┼────────────┐
+             │            │            │
+             ▼            ▼            ▼
+         Employees    Attendance      Leave
+         Management    Tracking      Requests
+             │            │            │
+             └────────────┼────────────┘
+                          │
+                          ▼
+                       Payroll
+                          │
+                          ▼
+                      Analytics
+                          │
+                          ▼
+                    HR Dashboard
+```
+
+---
+
+# 🔐 Authentication & Authorization
+
+NexusHR is designed around role-aware access to HR functionality.
+
+The application distinguishes between:
+
+* **Administrators**
+* **HR users**
+* **Employees**
+
+This separation provides the foundation for restricting sensitive HR operations.
+
+### Authorization model
+
+```text
+                    User
+                     │
+                     ▼
+                Authenticate
+                     │
+                     ▼
+                    Role
+                     │
+          ┌──────────┼──────────┐
+          ▼          ▼          ▼
+        Admin        HR      Employee
+          │          │          │
+          ▼          ▼          ▼
+       Admin       HR Ops    Employee
+       Access      Access      Access
+```
+
+> **Security principle:** Authorization for sensitive operations should always be enforced at the backend/API level rather than relying only on frontend route protection.
 
 ---
 
@@ -273,7 +398,13 @@ NexusHR follows a separated full-stack architecture.
 | **PostgreSQL** | Relational database           |
 | **SQL**        | Database schema and queries   |
 
-The repository includes a dedicated `supabase-schema.sql` file for the database structure.
+The repository contains a dedicated:
+
+```text
+Backend/supabase-schema.sql
+```
+
+file for the database structure.
 
 ---
 
@@ -284,13 +415,13 @@ The repository includes a dedicated `supabase-schema.sql` file for the database 
 * npm
 * Vite
 * Supabase
-* VS Code
+* Visual Studio Code
 
 ---
 
 # 📁 Project Structure
 
-The repository is divided into two primary applications:
+NexusHR is divided into two primary applications: `Backend` and `Frontend`.
 
 ```text
 NexusHR/
@@ -326,88 +457,11 @@ NexusHR/
 └── README.md
 ```
 
-The repository currently maintains dedicated backend source/test directories and a Supabase schema, while the frontend contains its own source tree, package configuration, TypeScript configuration, and Vite configuration.
-
 ---
 
-# 🔄 Application Workflow
+# 🗄️ Database Architecture
 
-A typical NexusHR workflow looks like this:
-
-```text
-                    User
-                      │
-                      ▼
-              ┌───────────────┐
-              │   Login /     │
-              │ Authentication│
-              └───────┬───────┘
-                      │
-                      ▼
-              ┌───────────────┐
-              │ Role & Access │
-              │ Verification  │
-              └───────┬───────┘
-                      │
-          ┌───────────┼───────────┐
-          │           │           │
-          ▼           ▼           ▼
-      Employee    Attendance     Leave
-      Management   Tracking     Requests
-          │           │           │
-          └───────────┼───────────┘
-                      │
-                      ▼
-                 Payroll
-                      │
-                      ▼
-                 Analytics
-                      │
-                      ▼
-                 HR Dashboard
-```
-
----
-
-# 🔐 Authentication & Authorization
-
-NexusHR is designed around role-aware access to HR functionality.
-
-The application distinguishes between:
-
-* **Administrators**
-* **HR users**
-* **Employees**
-
-This separation provides the foundation for restricting sensitive HR operations and ensuring that employees do not receive the same capabilities as administrative users.
-
-### Authorization concept
-
-```text
-                    User
-                     │
-                     ▼
-                Authenticate
-                     │
-                     ▼
-                  Role
-                     │
-          ┌──────────┼──────────┐
-          ▼          ▼          ▼
-        Admin        HR      Employee
-          │          │          │
-          ▼          ▼          ▼
-       Full/       HR Ops    Employee
-       Admin       Access      Access
-```
-
-> **Security note:** Production deployments should always enforce authorization on the backend rather than relying exclusively on frontend route protection.
-
----
-
-# 🗄️ Database
-
-NexusHR uses **Supabase PostgreSQL** as its relational database layer.
+NexusHR uses **Supabase PostgreSQL** as its relational data layer.
 
 The repository includes:
 
@@ -416,9 +470,9 @@ Backend/
 └── supabase-schema.sql
 ```
 
-This makes the database structure reproducible and provides a clear starting point for local development or another Supabase project.
+The relational model allows HR-related entities to remain connected while maintaining separation between business domains.
 
-A relational database is appropriate for NexusHR because the system contains naturally related entities such as:
+Conceptually:
 
 ```text
 Users
@@ -434,15 +488,13 @@ Users
   └── Departments
 ```
 
-This structure allows HR records and operational data to remain connected while maintaining separation between individual business domains.
+This structure provides a foundation for managing relationships between users, employees, departments, attendance, leave, and payroll information.
 
 ---
 
-# 🌐 API Layer
+# 🌐 API Architecture
 
-The backend provides the server-side layer between the React application and the PostgreSQL database.
-
-Conceptually:
+The backend acts as the communication layer between the React application and PostgreSQL.
 
 ```text
 React Frontend
@@ -451,13 +503,13 @@ React Frontend
       ▼
 Express Server
       │
-      ├── Route
+      ├── Routes
       │
-      ├── Controller
+      ├── Controllers
       │
       ├── Business Logic
       │
-      └── Database Operation
+      └── Database Operations
       │
       ▼
 Supabase PostgreSQL
@@ -469,7 +521,7 @@ Express Response
 React Frontend
 ```
 
-This approach prevents the frontend from becoming responsible for core business logic and makes the application easier to maintain.
+This keeps core business logic on the server and prevents the frontend from becoming responsible for sensitive data operations.
 
 ---
 
@@ -482,21 +534,21 @@ Backend/
 └── tests/
 ```
 
-Testing is an important part of the project architecture because HR systems handle business-critical information such as:
+Testing is particularly important for an HR platform because the system handles business-critical information such as:
 
 * Employee records
 * Attendance
 * Leave requests
-* Payroll information
+* Payroll
 * User roles
 
-As the project evolves, the test suite can be expanded to cover:
+The test suite can be expanded to cover:
 
 * API endpoints
 * Authentication
 * Authorization
 * CRUD operations
-* Validation
+* Input validation
 * Attendance workflows
 * Leave approval workflows
 * Payroll calculations
@@ -510,21 +562,22 @@ As the project evolves, the test suite can be expanded to cover:
 
 Before running NexusHR locally, make sure you have:
 
-* **Node.js 18 or later**
+* **Node.js 18+**
 * **npm**
+* **Git**
 * A **Supabase account**
-* Git
 
-Verify Node.js and npm:
+Check your installed versions:
 
 ```bash
 node --version
 npm --version
+git --version
 ```
 
 ---
 
-# 📥 Clone the Repository
+## 📥 1. Clone the Repository
 
 ```bash
 git clone https://github.com/AbdullahSoftDev/NexusHR.git
@@ -533,31 +586,31 @@ cd NexusHR
 
 ---
 
-# 🗃️ Configure Supabase
+## 🗃️ 2. Configure Supabase
 
-Create a new project through Supabase.
+Create a new project in Supabase.
 
 Then:
 
-1. Create your Supabase project.
-2. Open the SQL editor.
-3. Use the database schema provided in:
+1. Open the Supabase SQL Editor.
+2. Open:
 
 ```text
 Backend/supabase-schema.sql
 ```
 
+3. Copy the schema into the SQL Editor.
 4. Execute the schema.
-5. Obtain the required Supabase project credentials.
-6. Add the credentials to the appropriate backend environment configuration.
+5. Obtain the required project credentials.
+6. Add them to your environment configuration.
 
-> Never commit private Supabase keys or other secrets to GitHub.
+> Never commit private Supabase credentials, service-role keys, database passwords, or other secrets to GitHub.
 
 ---
 
 # 🚀 Backend Setup
 
-Navigate to the backend:
+Open a terminal and navigate to the backend:
 
 ```bash
 cd Backend
@@ -569,21 +622,27 @@ Install dependencies:
 npm install
 ```
 
-Configure your environment variables according to the backend configuration.
+Configure the backend environment variables according to the backend configuration.
 
-Then start the backend server using the available npm script:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-For production-style execution, use the appropriate production script defined in `Backend/package.json`.
+For production execution, use the appropriate script defined in:
+
+```text
+Backend/package.json
+```
 
 ---
 
 # 🎨 Frontend Setup
 
-Open a second terminal and navigate to the frontend:
+Open a second terminal.
+
+Navigate to the frontend:
 
 ```bash
 cd Frontend
@@ -595,13 +654,13 @@ Install dependencies:
 npm install
 ```
 
-Create your environment file from the provided example:
+Create the environment file from the provided example:
 
 ```bash
 cp .env.example .env
 ```
 
-On Windows PowerShell, you can use:
+### Windows PowerShell
 
 ```powershell
 Copy-Item .env.example .env
@@ -609,29 +668,27 @@ Copy-Item .env.example .env
 
 Update the environment variables with your local configuration.
 
-Start the development server:
+Start the Vite development server:
 
 ```bash
 npm run dev
 ```
 
-Vite will provide the local development URL in the terminal.
+Vite will display the local development URL in the terminal.
 
 ---
 
 # 🔑 Environment Variables
 
-Environment variables should contain configuration and credentials that should not be committed to source control.
-
-The frontend repository includes:
+The frontend repository provides:
 
 ```text
 Frontend/.env.example
 ```
 
-Use this file as the template for your local environment configuration.
+Use it as the template for your local environment configuration.
 
-Typical configuration may include values for:
+Depending on the current application configuration, environment variables may include values such as:
 
 ```env
 VITE_API_URL=
@@ -639,15 +696,28 @@ VITE_SUPABASE_URL=
 VITE_SUPABASE_ANON_KEY=
 ```
 
-Backend configuration should similarly be stored in environment variables rather than hard-coded inside source files.
+Backend configuration should similarly be stored in environment variables rather than hard-coded into source files.
 
-> **Important:** Do not commit `.env`, `.env.local`, API keys, service-role keys, database passwords, or other private credentials.
+### 🔒 Important
+
+Never commit:
+
+```text
+.env
+.env.local
+service-role keys
+database passwords
+private API keys
+authentication secrets
+```
+
+to the repository.
 
 ---
 
 # 🧑‍💻 Development Workflow
 
-A typical development workflow is:
+A typical local development workflow:
 
 ```text
 1. Clone repository
@@ -666,14 +736,14 @@ A typical development workflow is:
         ↓
 8. Install frontend dependencies
         ↓
-9. Start Vite development server
+9. Start frontend
         ↓
 10. Test application workflows
 ```
 
 ---
 
-# 📦 Build for Production
+# 📦 Production Build
 
 ## Frontend
 
@@ -683,13 +753,17 @@ From the `Frontend` directory:
 npm run build
 ```
 
-The resulting production build can be deployed to a compatible static hosting platform.
+This creates the production frontend build.
+
+The resulting build can be deployed to a compatible static hosting provider.
+
+---
 
 ## Backend
 
-From the `Backend` directory, install production dependencies and run the production start command defined in `package.json`.
+From the `Backend` directory, install production dependencies and use the production start script defined in `package.json`.
 
-A production deployment should also provide:
+A production deployment should provide:
 
 * Secure environment variables
 * Production Supabase configuration
@@ -704,43 +778,43 @@ A production deployment should also provide:
 
 # 📸 Screenshots
 
-> Add your actual NexusHR screenshots here once the final UI screenshots are available.
+Add your actual NexusHR screenshots here when they are ready.
 
 Recommended screenshots:
 
 ### Dashboard
 
-```text
+```md
 ![NexusHR Dashboard](./docs/screenshots/dashboard.png)
 ```
 
 ### Employee Management
 
-```text
+```md
 ![Employee Management](./docs/screenshots/employees.png)
 ```
 
 ### Attendance
 
-```text
+```md
 ![Attendance Management](./docs/screenshots/attendance.png)
 ```
 
 ### Leave Management
 
-```text
+```md
 ![Leave Management](./docs/screenshots/leave.png)
 ```
 
 ### Payroll
 
-```text
+```md
 ![Payroll Management](./docs/screenshots/payroll.png)
 ```
 
-### Login
+### Authentication
 
-```text
+```md
 ![NexusHR Login](./docs/screenshots/login.png)
 ```
 
@@ -771,9 +845,9 @@ Recommended screenshots:
 
 # 📈 Scalability
 
-NexusHR is structured so that additional modules can be introduced without redesigning the entire application.
+NexusHR is structured to allow additional modules to be introduced without redesigning the entire application.
 
-Potential modules include:
+Potential future modules include:
 
 ```text
 NexusHR
@@ -795,15 +869,13 @@ NexusHR
 └── Audit Logs
 ```
 
-The separated frontend/backend architecture provides a useful foundation for this type of expansion.
+The separated frontend/backend architecture provides a foundation for extending the platform as requirements grow.
 
 ---
 
 # 🔮 Future Improvements
 
-The following features can be considered for future versions:
-
-### 👤 Employee Self-Service
+## 👤 Employee Self-Service
 
 * Personal profile management
 * Leave balance
@@ -811,7 +883,7 @@ The following features can be considered for future versions:
 * Payslip access
 * Personal documents
 
-### 📅 Advanced Attendance
+## 📅 Advanced Attendance
 
 * Monthly attendance reports
 * Late arrival tracking
@@ -819,7 +891,7 @@ The following features can be considered for future versions:
 * Absence analytics
 * Attendance exports
 
-### 💵 Advanced Payroll
+## 💵 Advanced Payroll
 
 * Automated salary calculations
 * Tax deductions
@@ -828,7 +900,7 @@ The following features can be considered for future versions:
 * Payslip generation
 * Payroll reports
 
-### 📊 Advanced Analytics
+## 📊 Advanced Analytics
 
 * Workforce trends
 * Attendance trends
@@ -837,7 +909,7 @@ The following features can be considered for future versions:
 * Department comparisons
 * Employee statistics
 
-### 🔔 Notifications
+## 🔔 Notifications
 
 * Leave request notifications
 * Approval notifications
@@ -845,16 +917,16 @@ The following features can be considered for future versions:
 * Attendance reminders
 * System announcements
 
-### 🔐 Advanced Security
+## 🔐 Advanced Security
 
 * Password reset
 * Multi-factor authentication
 * Session management
 * Audit logging
-* More granular permissions
+* Granular permissions
 * Backend authorization middleware
 
-### 📄 Reporting
+## 📄 Reporting
 
 * PDF reports
 * CSV exports
@@ -866,14 +938,14 @@ The following features can be considered for future versions:
 
 # 🛡️ Security Considerations
 
-Because NexusHR deals with employee and payroll-related information, security should be treated as a core requirement.
+Because NexusHR handles employee and payroll-related information, security should be treated as a core requirement.
 
 Recommended production practices include:
 
 * Never expose service-role credentials to the frontend
 * Keep secrets inside environment variables
-* Validate all API input
-* Implement backend authorization
+* Validate API input
+* Enforce authorization on the backend
 * Use HTTPS in production
 * Configure CORS carefully
 * Apply database-level security policies
@@ -887,60 +959,59 @@ Recommended production practices include:
 
 # 🧱 Engineering Principles
 
-NexusHR follows several practical software engineering principles:
-
-### Separation of Concerns
+## Separation of Concerns
 
 Frontend presentation, backend business logic, and database operations are separated.
 
-### Modular Design
+## Modular Design
 
-HR functionality is divided into logical modules rather than being implemented as one large application component.
+HR functionality is divided into logical modules instead of being implemented as one large application component.
 
-### Reusability
+## Reusability
 
-Reusable frontend and backend components can be extended as new HR modules are introduced.
+Reusable frontend and backend components provide a foundation for adding new HR functionality.
 
-### Maintainability
+## Maintainability
 
 Configuration, source code, tests, and database schema are maintained as separate concerns.
 
-### Scalability
+## Scalability
 
 The architecture allows additional modules and services to be introduced as requirements grow.
 
 ---
 
-# 🌍 Deployment
+# 🌍 Deployment Architecture
 
 NexusHR can be deployed as separate frontend and backend services.
 
-A typical deployment architecture could be:
+A typical deployment architecture:
 
 ```text
-                    Internet
-                       │
-                       ▼
-              ┌─────────────────┐
-              │  React Frontend │
-              │ Static Hosting  │
-              └────────┬────────┘
-                       │
-                       │ HTTPS API
-                       ▼
-              ┌─────────────────┐
-              │ Node / Express  │
-              │ Backend Server  │
-              └────────┬────────┘
-                       │
-                       ▼
-              ┌─────────────────┐
-              │    Supabase     │
-              │   PostgreSQL    │
-              └─────────────────┘
+                         Internet
+                            │
+                            ▼
+                  ┌──────────────────┐
+                  │ React Frontend   │
+                  │ Static Hosting   │
+                  └────────┬─────────┘
+                           │
+                           │ HTTPS API
+                           ▼
+                  ┌──────────────────┐
+                  │ Node + Express   │
+                  │ Backend Server   │
+                  └────────┬─────────┘
+                           │
+                           │ Database
+                           ▼
+                  ┌──────────────────┐
+                  │     Supabase     │
+                  │    PostgreSQL    │
+                  └──────────────────┘
 ```
 
-Suitable hosting choices can be selected independently for the frontend and backend depending on deployment requirements.
+Frontend and backend hosting can be selected independently depending on deployment requirements.
 
 ---
 
@@ -948,27 +1019,37 @@ Suitable hosting choices can be selected independently for the frontend and back
 
 Contributions and improvements are welcome.
 
-To contribute:
+### 1. Fork the repository
+
+### 2. Clone your fork
 
 ```bash
-# Fork the repository
-
-# Clone your fork
 git clone https://github.com/YOUR_USERNAME/NexusHR.git
+```
 
-# Create a feature branch
+### 3. Create a feature branch
+
+```bash
 git checkout -b feature/your-feature
+```
 
-# Make your changes
+### 4. Make your changes
 
-# Commit
+### 5. Commit your changes
+
+```bash
 git commit -m "Add: your feature"
+```
 
-# Push
+### 6. Push your branch
+
+```bash
 git push origin feature/your-feature
 ```
 
-Then open a Pull Request.
+### 7. Open a Pull Request
+
+Provide a clear description of the changes and include screenshots when the changes affect the UI.
 
 ---
 
@@ -979,15 +1060,16 @@ If you discover a bug or have a feature suggestion:
 1. Open an issue in the repository.
 2. Clearly describe the problem or proposed feature.
 3. Include reproduction steps where applicable.
-4. Add screenshots or error messages when useful.
+4. Include screenshots or error messages when useful.
+5. Mention the relevant module if possible.
 
 ---
 
 # 📄 License
 
-This project currently does not specify a license.
+This project currently does not specify an open-source license.
 
-If you intend to make NexusHR open source for reuse, consider adding an appropriate license such as the MIT License.
+If NexusHR is intended to be publicly reusable, an appropriate license such as the **MIT License** can be added to the repository.
 
 ---
 
@@ -997,9 +1079,9 @@ If you intend to make NexusHR open source for reuse, consider adding an appropri
 
 ### Muhammad Abdullah
 
-Computer Science Student & Full-Stack Developer
+**Computer Science Student & Full-Stack Developer**
 
-Building practical software systems with modern web technologies.
+Building practical software systems with modern technologies.
 
 <br />
 
@@ -1025,7 +1107,7 @@ NexusHR demonstrates practical experience with:
 * HR workflow design
 * Database schema design
 * API integration
-* Testing
+* Backend testing
 * Environment-based configuration
 * Modular software architecture
 
@@ -1033,12 +1115,16 @@ NexusHR demonstrates practical experience with:
 
 <div align="center">
 
-## 🧑‍💼 NexusHR
+# 🧑‍💼 NexusHR
 
-**Human Resource Management, centralized.**
+### Connecting People, Processes & Productivity
+
+**A centralized hub for modern human resource management.**
 
 Built with ❤️ using modern web technologies.
 
-⭐ If you find this project useful, consider giving the repository a star.
+<br />
+
+⭐ **If you find NexusHR useful, consider giving the repository a star.**
 
 </div>
