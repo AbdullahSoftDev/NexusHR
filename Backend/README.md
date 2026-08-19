@@ -1,5 +1,7 @@
-<div align="center">
 
+<div align="center">
+<img src="https://github.com/AbdullahSoftDev/Pictures/blob/cb9b2379db11ad16b72eeaaaacdeb8b3bdf73e89/nexushr-backend.png?raw=true" alt="NexusHR Backend Banner" width="100%">
+ 
 # 🏢 NexusHR Backend API
 
 ### The secure, modular backend powering the NexusHR Human Resource Management Platform
