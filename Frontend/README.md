@@ -1,10 +1,16 @@
-# 🧑‍💼 NexusHR — HR Management Dashboard
+<div align="center">
+  <img
+    src="https://github.com/AbdullahSoftDev/Pictures/blob/a768400d75eac1113b1a5d7ed696b2ff4f9cc3c6/nexushr-frontend.png"
+    alt="Nexus-Frontend-banner.png"
+    width="100%"
+  />
+
+---
+# 🧑‍💼 NexusHR — HR Management Dashboard Frontend
+</div>
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/AbdullahSoftDev/Pictures/main/nexushr-backend.png" alt="NexusHR Dashboard" width="900"/>
-
-<br/>
 
 ### A Modern, Interactive & Responsive Human Resource Management Interface
 
