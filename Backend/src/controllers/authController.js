@@ -25,12 +25,21 @@ export const register = asyncHandler(async (req, res) => {
         });
     }
 
-    // Check if user exists
-    const { data: existingUser } = await supabase
+    // Check if user exists (two safe, parameterized queries instead of
+    // interpolating raw input into a PostgREST .or() filter string)
+    const { data: existingByEmail } = await supabase
         .from('users')
         .select('id')
-        .or(`email.eq.${email},username.eq.${username}`)
-        .single();
+        .eq('email', email)
+        .maybeSingle();
+
+    const { data: existingByUsername } = await supabase
+        .from('users')
+        .select('id')
+        .eq('username', username)
+        .maybeSingle();
+
+    const existingUser = existingByEmail || existingByUsername;
 
     if (existingUser) {
         return res.status(400).json({
@@ -107,14 +116,21 @@ export const login = asyncHandler(async (req, res) => {
         });
     }
 
-    // Find user
-    const { data: user, error } = await supabase
+    // Find user (two safe, parameterized queries instead of interpolating
+    // raw input into a PostgREST .or() filter string)
+    const { data: userByEmail } = await supabase
         .from('users')
         .select('*')
-        .or(`email.eq.${emailOrUsername},username.eq.${emailOrUsername}`)
-        .single();
+        .eq('email', emailOrUsername)
+        .maybeSingle();
 
-    if (error || !user) {
+    const user = userByEmail || (await supabase
+        .from('users')
+        .select('*')
+        .eq('username', emailOrUsername)
+        .maybeSingle()).data;
+
+    if (!user) {
         return res.status(401).json({
             success: false,
             error: 'Invalid credentials'
