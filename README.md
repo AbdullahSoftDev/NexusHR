@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AbdullahSoftDev/Pictures/main/neuxhr.png" alt="NexusHR Dashboard" width="800">
+  <img src="https://github.com/AbdullahSoftDev/Pictures/blob/ceb913def4a7733ab5fc9af64a910e5d09371278/nexushr-banner.png" alt="NexusHR Dashboard" width="800">
 </div>
 
 <div align="center">
