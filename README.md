@@ -8,7 +8,9 @@
 
 ### Connecting People, Processes & Productivity
 
-**NexusHR — Nexus Human Resources — is a centralized HR management platform that connects employee management, attendance, leave, payroll, roles, and organizational insights in one unified system.**
+**NexusHR (Nexus Human Resources) is a full-stack HR management system that brings employee records, attendance tracking, leave management, payroll workflows, role-based access control, and organizational insights into one platform.**
+
+Explore this project as a **human resource management system (HRMS)** and employee management software portfolio example, with a React frontend and Node.js backend architecture. Feature availability depends on the modules configured in this repository.
 
 <br />
 
